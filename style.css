@@ -57,8 +57,8 @@ body {
 }
 
 .profile-photo {
-  width: 300px;
-  height: 300px;
+  width: 35%;
+  height: 35%;
   border-radius: 50%;
   overflow: hidden;
   border: 4.5px solid #fff;     /* 白色圆环 */
