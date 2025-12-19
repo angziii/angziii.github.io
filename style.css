@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #111;
+    --secondary-color: #333;
+    --accent-color: #1a73e8;
+    --bg-gradient: radial-gradient(circle at 35% 50%, #a2c2ff, #fefefe 60%);
+    --nav-bg: rgba(255, 255, 255, 0.3);
+    --border-color: rgba(17, 17, 17, 0.08);
+    --font-main: 'Inter', Arial, sans-serif;
+    --transition-speed: 320ms;
+    --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-main);
     padding-top: 64px; /* 给固定导航留空间 */
+    color: var(--secondary-color);
+    -webkit-font-smoothing: antialiased;
 }
+
 
 .background {
     position: fixed;
@@ -10,10 +27,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 35% 50%, #a2c2ff, #fefefe 60%);
+    background: var(--bg-gradient);
     filter: blur(40px) saturate(120%);
     z-index: -1; /* 保证在内容后面 */
 }
+
 
 .top-nav {
   position: fixed;
@@ -290,9 +308,71 @@ body {
             margin: 24px 0;
         }
         .blog-markdown .image-row img {
-            flex: 1;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
-        }
+    flex: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+/* =================================== */
+/*          Responsive Design          */
+/* =================================== */
+
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 12px 16px;
+    }
+
+    .top-nav ul {
+        gap: 20px;
+    }
+
+    .top-nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+        padding-top: 40px;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bio h1 {
+        font-size: 180%;
+    }
+
+    .updates h2 {
+        font-size: 150%;
+    }
+
+    .update-entry {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .update-entry a {
+        font-size: 110%;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav ul {
+        gap: 12px;
+    }
+
+    .top-nav a {
+        font-size: 13px;
+    }
+    
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
