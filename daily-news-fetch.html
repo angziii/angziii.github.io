@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>告别信息焦虑：我用 GitHub Actions 搭建了一套“私人订制”日报系统 - angzi's adventures</title>
+    <meta name="description" content="如何利用 GitHub Actions 和 Python 搭建全自动每日新闻聚合器。">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .blog-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .blog-header .category {
+            color: #1a73e8;
+            font-size: 13px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .blog-header h1 {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.35;
+            margin: 0 auto;
+            max-width: 800px;
+            color: #111;
+        }
+
+        .blog-hero-image {
+            width: 100%;
+            max-width: 1100px;
+            max-height: 560px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 48px;
+            border-radius: 4px;
+        }
+
+        .blog-markdown {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            text-align: left;
+        }
+
+        .blog-markdown h1,
+        .blog-markdown h2,
+        .blog-markdown h3 {
+            color: #111;
+            margin-top: 2em;
+        }
+
+        .blog-markdown p {
+            line-height: 1.8;
+            margin: 1.2em 0;
+            color: #333;
+        }
+
+        .blog-markdown ul {
+            padding-left: 1.5em;
+        }
+
+        .blog-markdown li {
+            margin: 0.5em 0;
+            line-height: 1.6;
+        }
+
+        .blog-markdown code {
+            background: #f4f4f4;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html" class="hover-float hover-pop">About Me</a></li>
+            <li><a href="research.html" class="hover-float hover-pop">Research</a></li>
+            <li><a href="crafts.html" class="hover-float hover-pop">Crafts</a></li>
+            <li><a href="walk_the_earth.html" class="hover-float hover-pop">Walk the earth</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="blog-header">
+            <p class="category">Crafts / Automation</p>
+            <h1>告别信息焦虑：我用 GitHub Actions 搭建了一套“私人订制”日报系统</h1>
+        </header>
+        <img src="daily-news-fetch-hero.png" class="blog-hero-image" loading="lazy"
+            alt="Daily News Aggregator Illustration">
+        <article class="blog-markdown">
+            <p><em>2025-12-22</em> · <em>本文章由 AI 撰写</em></p>
+
+            <p>在这个信息爆炸的时代，我们每天都被各种 App 的推送、社交媒体的碎片化信息包围。为了找回阅读的节奏，我利用 GitHub Actions 和 Python 搭建了一套全自动的每日新闻聚合器 (Daily
+                News Aggregator)。</p>
+
+            <p>今天，我想分享一下这个小工具的诞生过程以及为什么我觉得它比市面上的商业方案更香。</p>
+
+            <h2>🚀 它是如何工作的？</h2>
+            <p>这套系统非常轻量，不需要我维护任何服务器。它的核心逻辑如下：</p>
+            <ul>
+                <li><strong>自动抓取</strong>：通过 Python 脚本，每天早上 8:00 定时从我精选的 RSS 源中提取最新内容。</li>
+                <li><strong>智能清洗</strong>：自动剔除 HTML 标签，并对特定源（如少数派）进行智能断句优化，确保阅读体验顺滑。</li>
+                <li><strong>多渠道分发</strong>：
+                    <ul>
+                        <li><strong>GitHub 存档</strong>：生成带有日期后缀的 Markdown 文件（如
+                            <code>NEWS_251222.md</code>），自动提交到私有/公开仓库，形成我的个人数字报纸库。</li>
+                        <li><strong>精美邮件推送</strong>：将 Markdown 转换为带 CSS 样式的 HTML，推送到我的 Gmail 和家人的 QQ 邮箱。</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>🔥 核心优势：为什么不直接用商业软件？</h2>
+            <p>市面上虽然有 Mailbrew、Inoreader 等工具，但这套“自建房”方案有几点无可比拟：</p>
+            <ul>
+                <li><strong>完全免费 & 永久有效</strong>：利用 GitHub Actions 的免费额度，0 成本运行。</li>
+                <li><strong>极致的个性化</strong>：
+                    <ul>
+                        <li>我想看什么就跟脚本说，不用受限于商业软件的订阅池。</li>
+                        <li>我可以精准控制每个源只取“Top 5”条新闻，彻底拒绝信息过载。</li>
+                    </ul>
+                </li>
+                <li><strong>属于你的“数字剪报库”</strong>：商业软件通常只看当下，而我的 GitHub 仓库里保存着过去每一天的简报。这不仅是新闻，更是属于我个人的时间胶囊。</li>
+                <li><strong>隐私与安全</strong>：没有第三方公司会分析我的阅读偏好，所有的 API 密钥和邮箱授权码都加密存在 GitHub Secrets 中。</li>
+            </ul>
+
+            <h2>🛠️ 技术栈</h2>
+            <ul>
+                <li><strong>语言</strong>：Python 3.x</li>
+                <li><strong>解析器</strong>：feedparser</li>
+                <li><strong>排版引擎</strong>：markdown (用于生成精美 HTML 邮件)</li>
+                <li><strong>自动化</strong>：GitHub Actions (Cron Job)</li>
+                <li><strong>推送方式</strong>：SMTP (支持 Gmail, QQ 邮箱等)</li>
+            </ul>
+
+            <h2>📦 开源地址</h2>
+            <p>我已经把这套系统的基础模版开源了，如果你也想拥有一份每天八点准时送达的“数字报纸”，欢迎前往我的仓库：</p>
+            <p>👉 <a href="https://github.com/angziii/daily-news-fetch">daily-news-fetch</a></p>
+            <p>（目前添加：FT中文网、BBC 中文、联合早报、Solidot、Hacker News、少数派等信源。）</p>
+        </article>
+    </main>
+</body>
+
+</html>
