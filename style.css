@@ -161,7 +161,7 @@ body {
 
 
 .bio {
-  max-width: 520px;
+  max-width: 100%;
   line-height: 1.6;
   color: #333;
   font-size: 100%;
@@ -426,7 +426,8 @@ body {
   }
 
   .update-entry {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
