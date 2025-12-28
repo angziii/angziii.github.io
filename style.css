@@ -503,6 +503,7 @@ body {
   margin: 0 auto;
   padding: 0 20px 60px;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .blog-markdown h1,
@@ -563,8 +564,58 @@ body {
 
 /* Blog responsive styles for mobile */
 @media (max-width: 768px) {
+  .blog-header {
+    padding: 40px 20px 24px;
+  }
+
   .blog-header h1 {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .blog-header .category {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .blog-hero-image {
+    margin: 0 0 32px;
+    border-radius: 0;
+  }
+
+  .blog-markdown {
+    padding: 0 16px 40px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .blog-markdown p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 1em 0;
+  }
+
+  .blog-markdown h2 {
+    font-size: 20px;
+    margin-top: 1.5em;
+  }
+
+  .blog-markdown h3 {
+    font-size: 18px;
+  }
+
+  .blog-markdown ul {
+    padding-left: 1.2em;
+  }
+
+  .blog-markdown ul ul {
+    padding-left: 1em;
+  }
+
+  .blog-markdown li {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .blog-markdown .image-row {
@@ -580,21 +631,10 @@ body {
   .blog-markdown code {
     word-wrap: break-word;
     overflow-wrap: break-word;
-  }
-
-  /* 防止长链接和长单词撑开容器 */
-  .blog-markdown {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
+    font-size: 14px;
   }
 
   .blog-markdown a {
     word-break: break-all;
-  }
-
-  /* 限制嵌套列表的缩进 */
-  .blog-markdown ul ul {
-    padding-left: 1em;
   }
 }
