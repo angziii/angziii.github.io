@@ -554,3 +554,41 @@ body {
   border-radius: 4px;
   display: block;
 }
+
+/* Blog responsive styles for mobile */
+@media (max-width: 768px) {
+  .blog-header h1 {
+    font-size: 28px;
+  }
+
+  .blog-markdown .image-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .blog-markdown .image-row img {
+    max-height: none;
+    width: 100%;
+  }
+
+  .blog-markdown code {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* 防止长链接和长单词撑开容器 */
+  .blog-markdown {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .blog-markdown a {
+    word-break: break-all;
+  }
+
+  /* 限制嵌套列表的缩进 */
+  .blog-markdown ul ul {
+    padding-left: 1em;
+  }
+}
