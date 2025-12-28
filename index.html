@@ -26,7 +26,7 @@
             <img src="angzi.png" alt="My portrait">
         </div>
         <div class="bio">
-            <h1><span class="hover-float">@angziii</span></h1>
+            <h1><span id="typewriter" class="typewriter"></span><span class="cursor">|</span></h1>
             <p><span class="hover-float">👋 Hi, I’m an UG student at SUSTech.</span></p>
             <p><span class="hover-float">👀 I’m passionate about AI4S, software design.</span></p>
             <p><span class="hover-float">📫 Feel free to reach out: angzi2023@qq.com</span></p>
@@ -52,7 +52,24 @@
 
     </section>
 
+    <script>
+        // Typewriter effect for @angziii
+        const text = "@angziii";
+        const typewriter = document.getElementById('typewriter');
+        let i = 0;
 
+        function type() {
+            if (i < text.length) {
+                typewriter.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 150);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(type, 500);
+        });
+    </script>
 
 </body>
 
