@@ -440,6 +440,24 @@ body {
   .update-entry a {
     font-size: 110%;
   }
+
+  /* 禁用移动端悬浮效果 */
+  .hover-float,
+  .hover-lift,
+  .hover-pop {
+    transform: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  .hover-float:hover,
+  .hover-lift:hover,
+  .hover-pop:hover {
+    transform: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
 }
 
 @media (max-width: 480px) {
