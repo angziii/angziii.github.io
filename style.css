@@ -12,6 +12,10 @@
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: var(--font-main);
@@ -19,6 +23,8 @@ body {
   /* 给固定导航留空间 */
   color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 
