@@ -1,5 +1,12 @@
 const MAP_DATA = [
   {
+    "name": "亚庇",
+    "lat": 5.9804,
+    "lng": 116.0735,
+    "category": "travel",
+    "layer": "2026"
+  },
+  {
     "name": "金沙湾",
     "lat": 1.2844069,
     "lng": 103.8656105,
