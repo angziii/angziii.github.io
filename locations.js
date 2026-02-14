@@ -161,9 +161,9 @@ const MAP_DATA = [
     "layer": "2025"
   },
   {
-    "name": "蓬莱国际机场",
-    "lat": 37.6618201,
-    "lng": 120.9880689,
+    "name": "大兴国际机场",
+    "lat": 40.0799,
+    "lng": 116.6031,
     "category": "flight",
     "layer": "2026"
   },
@@ -174,13 +174,7 @@ const MAP_DATA = [
     "category": "flight",
     "layer": "2026"
   },
-  {
-    "name": "江北国际机场",
-    "lat": 29.7187404,
-    "lng": 106.6412907,
-    "category": "flight",
-    "layer": "2026"
-  },
+
   {
     "name": "高崎国际机场",
     "lat": 24.5397344,
