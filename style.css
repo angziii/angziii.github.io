@@ -356,9 +356,9 @@ body {
 }
 
 .blog-header .subtitle {
-  font-size: 18px;
+  font-size: 22px;
   color: #666;
-  margin: 8px auto 0;
+  margin: 10px auto 0;
   max-width: 800px;
   font-weight: 400;
 }
