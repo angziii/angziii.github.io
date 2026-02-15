@@ -355,6 +355,14 @@ body {
   color: #111;
 }
 
+.blog-header .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 8px auto 0;
+  max-width: 800px;
+  font-weight: 400;
+}
+
 .blog-hero-image {
   width: 100%;
   max-width: 1100px;
