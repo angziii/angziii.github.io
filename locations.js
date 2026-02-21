@@ -7,6 +7,13 @@ const MAP_DATA = [
     "layer": "2026"
   },
   {
+    "name": "南京",
+    "lat": 32.0615513,
+    "lng": 118.7915619,
+    "category": "travel",
+    "layer": "2026"
+  },
+  {
     "name": "金沙湾",
     "lat": 1.2844069,
     "lng": 103.8656105,
