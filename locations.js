@@ -230,5 +230,12 @@ const MAP_DATA = [
     "lng": 100.1409,
     "category": "travel",
     "layer": "2017"
+  },
+  {
+    "name": "芙蓉镇",
+    "lat": 28.742238,
+    "lng": 109.947678,
+    "category": "travel",
+    "layer": "2017"
   }
 ];
