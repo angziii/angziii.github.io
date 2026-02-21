@@ -202,5 +202,33 @@ const MAP_DATA = [
     "lng": 120.0099184,
     "category": "study",
     "layer": "2023"
+  },
+  {
+    "name": "布达拉宫",
+    "lat": 29.654527,
+    "lng": 91.118522,
+    "category": "travel",
+    "layer": "2017"
+  },
+  {
+    "name": "兵马俑",
+    "lat": 34.3843,
+    "lng": 109.2788,
+    "category": "travel",
+    "layer": "2017"
+  },
+  {
+    "name": "成都武侯祠",
+    "lat": 30.646094,
+    "lng": 104.047994,
+    "category": "travel",
+    "layer": "2017"
+  },
+  {
+    "name": "青海湖",
+    "lat": 36.8984,
+    "lng": 100.1409,
+    "category": "travel",
+    "layer": "2017"
   }
 ];
