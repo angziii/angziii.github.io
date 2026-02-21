@@ -17,7 +17,7 @@ const MAP_DATA = [
     "name": "黄岐半岛",
     "lat": 26.35,
     "lng": 119.89,
-    "category": "travel",
+    "category": "drive",
     "layer": "2026"
   },
   {
@@ -221,35 +221,35 @@ const MAP_DATA = [
     "name": "布达拉宫",
     "lat": 29.654527,
     "lng": 91.118522,
-    "category": "travel",
+    "category": "drive",
     "layer": "2017"
   },
   {
     "name": "兵马俑",
     "lat": 34.3843,
     "lng": 109.2788,
-    "category": "travel",
+    "category": "drive",
     "layer": "2017"
   },
   {
     "name": "成都武侯祠",
     "lat": 30.646094,
     "lng": 104.047994,
-    "category": "travel",
+    "category": "drive",
     "layer": "2017"
   },
   {
     "name": "青海湖",
     "lat": 36.8984,
     "lng": 100.1409,
-    "category": "travel",
+    "category": "drive",
     "layer": "2017"
   },
   {
     "name": "芙蓉镇",
     "lat": 28.742238,
     "lng": 109.947678,
-    "category": "travel",
+    "category": "drive",
     "layer": "2017"
   }
 ];
