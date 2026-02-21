@@ -14,6 +14,13 @@ const MAP_DATA = [
     "layer": "2026"
   },
   {
+    "name": "黄岐半岛",
+    "lat": 26.35,
+    "lng": 119.89,
+    "category": "travel",
+    "layer": "2026"
+  },
+  {
     "name": "金沙湾",
     "lat": 1.2844069,
     "lng": 103.8656105,
