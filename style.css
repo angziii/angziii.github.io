@@ -3,7 +3,7 @@
 :root {
   --primary-color: #111;
   --secondary-color: #333;
-  --accent-color: #1a73e8;
+  --accent-color: #3D6B4F;
   --bg-gradient: radial-gradient(circle at 35% 50%, #a2c2ff, #fefefe 60%);
   --nav-bg: rgba(255, 255, 255, 0.3);
   --border-color: rgba(17, 17, 17, 0.08);
@@ -34,35 +34,72 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background:
-    radial-gradient(circle at 35% 50%, #a2c2ff, transparent 50%),
-    radial-gradient(circle at 75% 30%, #fff8c4, transparent 40%),
-    radial-gradient(circle at 50% 80%, #c4f0ff, transparent 45%),
-    #fefefe;
-  background-size: 200% 200%;
-  filter: blur(60px) saturate(130%);
+  background: #fff;
   z-index: -1;
-  animation: gradientFlow 20s ease-in-out infinite;
 }
 
-@keyframes gradientFlow {
+.tearable-entry {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 250, 226, 0.9), rgba(239, 235, 220, 0.88) 52%, rgba(214, 211, 199, 0.82)),
+    #f6f4ec;
+  touch-action: none;
+  transition: opacity 650ms var(--ease-out-expo), visibility 650ms var(--ease-out-expo);
+}
 
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
+.tearable-entry::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(20, 20, 20, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 20, 20, 0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mix-blend-mode: multiply;
+}
 
-  25% {
-    background-position: 50% 0%;
-  }
+.tearable-entry.is-dismissed {
+  opacity: 0;
+  visibility: hidden;
+}
 
-  50% {
-    background-position: 100% 50%;
-  }
+#tearable-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  display: block;
+}
 
-  75% {
-    background-position: 50% 100%;
-  }
+#tearable-canvas:active {
+  cursor: grabbing;
+}
+
+.tearable-skip {
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  z-index: 2;
+  border: 1px solid rgba(17, 17, 17, 0.22);
+  background: rgba(255, 255, 255, 0.52);
+  color: rgba(17, 17, 17, 0.72);
+  border-radius: 999px;
+  padding: 9px 15px 10px;
+  font: 600 13px/1 var(--font-main);
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+
+.tearable-skip:hover {
+  color: #111;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 
@@ -339,7 +376,7 @@ body {
 }
 
 .blog-header .category {
-  color: #1a73e8;
+  color: var(--accent-color);
   font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -501,7 +538,7 @@ body {
 }
 
 .blog-header .category {
-  color: #1a73e8;
+  color: var(--accent-color);
   font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -563,6 +600,24 @@ body {
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-family: monospace;
+}
+
+.blog-markdown pre {
+  margin: 1.4em 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: #f6f7f5;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.blog-markdown pre code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  line-height: 1.7;
+  white-space: pre;
 }
 
 .blog-markdown table {
